@@ -3,23 +3,24 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <form onSubmit={presion}>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <input type="text" id="valor1" />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>
+          <input type="submit" value="Sumar" />
+        </p>
+      </form>
     </div>
   );
+}
+
+function presion(e) {
+  e.preventDefault();
+  const t1 = document.getElementById('valor1').value
+  const texto=t1;
+  alert('El texto es:'+texto);
 }
 
 export default App;
